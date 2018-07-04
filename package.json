@@ -74,10 +74,10 @@
     "postcss-url": "^7.3.1",
     "prop-types": "^15.6.1",
     "puppeteer": "^1.5.0",
-    "react": "^16.2.0",
+    "react": "^16.4.1",
     "react-css-transition": "^0.7.4",
     "react-dev-utils": "^5.0.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.4.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "^2.3.0",
@@ -97,6 +97,7 @@
     "webpack-notifier": "^1.5.0"
   },
   "dependencies": {
-    "flow-typed": "^2.4.0"
+    "flow-typed": "^2.4.0",
+    "reactstrap": "^6.2.0"
   }
 }
