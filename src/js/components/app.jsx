@@ -14,7 +14,7 @@ import Welcome from './welcome/welcome.jsx';
 import About from './about/about.jsx';
 import Footer from './footer/footer.jsx';
 
-import styles from './ui.css';
+import styles from './app.css';
 
 type Props = {
   breakpoint:number
@@ -24,7 +24,7 @@ type State = {
   flat:boolean
 }
 
-class UI extends React.Component<Props, State>
+class App extends React.Component<Props, State>
 {
   currentSection:HTMLElement;
   transitionDuration:number = 300;
@@ -189,4 +189,4 @@ class UI extends React.Component<Props, State>
   }
 }
 
-export default UI;
+export default App;

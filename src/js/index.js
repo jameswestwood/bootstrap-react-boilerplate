@@ -7,7 +7,7 @@ import { HashRouter } from 'react-router-dom';
 import styles from '../css/base.css';
 import critical from '../css/critical.crit.css';
 
-import UI from './components/ui.jsx';
+import App from './components/app.jsx';
 
 window.onload = function () {
 
@@ -17,7 +17,7 @@ window.onload = function () {
   {
     render(
         <HashRouter>
-          <UI breakpoint={600} />
+          <App breakpoint={600} />
         </HashRouter>,
         appContainer
       );
