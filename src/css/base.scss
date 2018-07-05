@@ -1,5 +1,6 @@
 @import "./libs/caesar.scss";
 @import "config.scss";
+@import "mixins.scss";
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,7 +15,7 @@ html{
   box-sizing: border-box;
 
   // https://css-tricks.com/snippets/css/fluid-typography/
-  font-size: calc(($minimum-font-size + 'px') + ($maximum-font-size - $minimum-font-size) * ((100vw - ($minimum-viewport-width + 'px')) / ($maximum-viewport-width - $minimum-viewport-width)));
+  @include fluid-type($minimum-viewport-width, $maximum-viewport-width, $minimum-font-size, $maximum-font-size);
 }
 
 strong{

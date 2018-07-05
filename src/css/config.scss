@@ -1,3 +1,4 @@
+// import bootstrap variables here so we can easily access them inside our custom components
 @import "./libs/bootstrap/_functions";
 @import "./libs/bootstrap/_variables";
 @import "./libs/bootstrap/_mixins";
@@ -5,11 +6,11 @@
 @import "./libs/bootstrap/_reboot";
 @import "./libs/bootstrap/_type";
 
-$minimum-font-size:24;
-$maximum-font-size:30;
+$minimum-font-size:18px;
+$maximum-font-size:24px;
 
-$minimum-viewport-width:320;
-$maximum-viewport-width:1200;
+$minimum-viewport-width:320px;
+$maximum-viewport-width:1200px;
 
 $horizontal-padding: 5vw;
 
