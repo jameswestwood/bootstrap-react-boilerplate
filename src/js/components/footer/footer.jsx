@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 
-import styles from './footer.css';
+import styles from './footer.scss';
 
 type Props = {
   specifier?:string

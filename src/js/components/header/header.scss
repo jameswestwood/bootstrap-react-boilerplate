@@ -1,0 +1,23 @@
+@import "../../../css/config.scss";
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem $horizontal-padding;
+
+  &__logo{
+    display: inline-block;
+    width:1.6rem;
+    height:1.6rem;
+
+    &-path{
+      //stroke:var(--primary-color);
+      //fill:var(--primary-color);
+    }
+  }
+
+  &__title{
+    font-size: 1rem;
+  }
+}

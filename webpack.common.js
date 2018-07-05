@@ -48,7 +48,7 @@ module.exports = {
           loader: 'json-loader'
         },
         {
-          test: /\.(png|jpg|gif)$/,
+          test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,
           use: [
           {
             loader: 'url-loader',
@@ -58,41 +58,24 @@ module.exports = {
           }]
         },
         {
-          test: /\.css/i,
-          exclude: /\.crit.css/,
+
+          test: /\.scss/i,
+          exclude: /\.crit.scss/,
           loader: extractBaseCSS.extract({
             use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  sourceMap: false,
-                  url: false,
-                  config: {
-                    path: './postcss.config.js'
-                  }
-                }
-              },
-              'postcss-loader'
+              "css-loader", // translates CSS into CommonJS
+              'resolve-url-loader',
+              "sass-loader?sourceMap" // compiles Sass to CSS
             ]
             })
           },
           {
-            test: /\.crit.css/i,
+            test: /\.crit.scss/i,
             loader: extractCriticalCSS.extract({
               use: [
-                {
-                  loader: 'css-loader',
-                  options: {
-                    importLoaders: 1,
-                    sourceMap: true,
-                    url: false,
-                    config: {
-                      path: './postcss.config.js'
-                    }
-                  }
-                },
-                'postcss-loader'
+                "css-loader", // translates CSS into CommonJS
+                'resolve-url-loader',
+                "sass-loader?sourceMap" // compiles Sass to CSS
               ]
             })
           }]

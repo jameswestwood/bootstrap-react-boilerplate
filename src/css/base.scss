@@ -1,0 +1,32 @@
+@import "./libs/caesar.scss";
+@import "config.scss";
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  user-select:none;
+}
+
+html{
+	padding: 0;
+	margin: 0;
+  -webkit-font-smoothing: antialiased;
+
+  box-sizing: border-box;
+
+  // https://css-tricks.com/snippets/css/fluid-typography/
+  font-size: calc(($minimum-font-size + 'px') + ($maximum-font-size - $minimum-font-size) * ((100vw - ($minimum-viewport-width + 'px')) / ($maximum-viewport-width - $minimum-viewport-width)));
+}
+
+strong{
+	font-weight: bold;
+}
+
+a{
+  transition: color 0.25s $easeOutQuad;
+}
+
+button{
+  &:hover{
+    cursor: pointer;
+  }
+}

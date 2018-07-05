@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 
-import styles from './nav.css';
+import styles from './nav.scss';
 
 type Props = {
   paths:{},

@@ -1,0 +1,40 @@
+@import "../../../css/config.scss";
+@import "../../../css/libs/caesar.scss";
+
+.footer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem $horizontal-padding;
+
+  font-size: 0.4rem;
+
+  &:before{
+    content: '';
+    position: absolute;
+    left:$horizontal-padding;
+    right:$horizontal-padding;
+    top:0;
+    height: 2px;
+
+    //background-color: color($primary-color alpha(15%));
+  }
+
+  &__icon-btn{
+    opacity: 0.5;
+    display: inline-block;
+    width:1rem;
+    height:1rem;
+
+    transition: opacity 0.25s  $easeOutQuad;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__icon-path{
+    //fill:$primary-color;
+  }
+}

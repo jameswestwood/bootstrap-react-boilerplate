@@ -1,0 +1,18 @@
+@import "./libs/bootstrap/_functions";
+@import "./libs/bootstrap/_variables";
+@import "./libs/bootstrap/_mixins";
+@import "./libs/bootstrap/_root";
+@import "./libs/bootstrap/_reboot";
+@import "./libs/bootstrap/_type";
+
+$minimum-font-size:24;
+$maximum-font-size:30;
+
+$minimum-viewport-width:320;
+$maximum-viewport-width:1200;
+
+$horizontal-padding: 5vw;
+
+/* icons */
+$icon-size-reg:1.3rem;
+$icon-size-small:0.8rem;

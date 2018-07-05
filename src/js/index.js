@@ -4,8 +4,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 
-import styles from '../css/base.css';
-import critical from '../css/critical.crit.css';
+import bootstrapStyles from '../css/libs/bootstrap/bootstrap.scss';
+
+import styles from '../css/base.scss';
+import critical from '../css/critical.crit.scss';
 
 import App from './components/app.jsx';
 

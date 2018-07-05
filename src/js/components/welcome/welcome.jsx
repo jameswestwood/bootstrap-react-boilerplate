@@ -5,8 +5,6 @@ import { render } from 'react-dom';
 
 import { Button } from 'reactstrap';
 
-import styles from '../../../css/content.css';
-
 type Props = {}
 
 class Welcome extends React.Component<Props>

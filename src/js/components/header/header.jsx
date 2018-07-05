@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Nav from '../nav/nav.jsx';
 
-import styles from './header.css';
+import styles from './header.scss';
 
 type Props = {
   paths:{},

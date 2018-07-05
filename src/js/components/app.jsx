@@ -14,7 +14,7 @@ import Welcome from './welcome/welcome.jsx';
 import About from './about/about.jsx';
 import Footer from './footer/footer.jsx';
 
-import styles from './app.css';
+import styles from './app.scss';
 
 type Props = {
   breakpoint:number
