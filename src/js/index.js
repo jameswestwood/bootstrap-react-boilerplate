@@ -4,7 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 
-import bootstrapStyles from '../css/libs/bootstrap/bootstrap.scss';
+import bootstrapStyles from '../css/bootstrap.custom.scss';
 
 import styles from '../css/base.scss';
 import critical from '../css/critical.crit.scss';

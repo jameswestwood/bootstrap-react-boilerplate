@@ -16,7 +16,7 @@ class Welcome extends React.Component<Props>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex <a href="#">ea commodo consequat</a>.</p>
 
-        <Button color="danger">Danger!</Button>
+        <Button color="primary">Danger!</Button>
       </div>
     );
   }
