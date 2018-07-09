@@ -1,3 +1,11 @@
+@import "libs/bootstrap/functions";
+@import "libs/bootstrap/variables";
+
+// import bootstrap grid mixins so we can easily import them into other custom files
+@import "libs/bootstrap/mixins/breakpoints";
+@import "libs/bootstrap/mixins/grid-framework";
+@import "libs/bootstrap/mixins/grid";
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }

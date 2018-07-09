@@ -1,12 +1,15 @@
 @import "../../../css/config.scss";
 @import "../../../css/libs/caesar.scss";
+@import "../../../css/mixins.scss";
 
 .footer{
+  @include make-container();
+  @include make-container-max-widths();
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem $horizontal-padding;
 
   font-size: 0.4rem;
 

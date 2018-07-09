@@ -46,3 +46,7 @@ These rules are not immutable, but adhering to them will make your life a lot ea
 Bespoke styling for components and scaffolding uses the **BEM methodology** (http://getbem.com/) as it's naming convention.
 
 CSS is transformed via **PostCSS** (https://github.com/postcss/postcss). You can find a list of plugins being used in [postcss.config.js](postcss.config.js).
+
+### Grid
+
+Grid styles should be applied semantically via bootstraps [grid mixins](https://getbootstrap.com/docs/4.0/layout/grid/#mixins). This keeps our HTML clean and lean, and means layout changes are applied from one place, our CSS. This also helps to keep as much of our styling names adherant to BEM as possible, as our grid CSS is abstracted inside our custom classes.

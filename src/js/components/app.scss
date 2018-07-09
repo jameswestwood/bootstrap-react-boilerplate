@@ -1,9 +1,11 @@
 
 @import "../../css/config.scss";
 @import "../../css/libs/animate.scss";
+@import "../../css/mixins.scss";
 
 .ui{
   @include fadeIn(1s);
+  margin:0 auto;
 
   &--layered{
     display: flex;
@@ -11,7 +13,6 @@
 
     max-width: $maximum-viewport-width;
     min-height: 100vh;
-    margin: 0 auto;
 
     & .ui__content{
       position: relative;
@@ -38,6 +39,11 @@
     }
   }
 
+  &__content{
+    @include make-container();
+    @include make-container-max-widths();
+  }
+
   &__nav{
     visibility: hidden;
   }
@@ -47,7 +53,7 @@
     align-items: center;
     min-height: 90vh;
 
-    padding: 5rem $horizontal-padding;
+    padding: 5rem 0;
 
     &:nth-child(even)
     {
