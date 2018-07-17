@@ -8,7 +8,6 @@ import anime from 'animejs'
 import Utilities from '../classes/utilities'
 
 import Header from './header/header'
-import Nav from './nav/nav'
 import Welcome from './welcome/welcome'
 import About from './about/about'
 import Footer from './footer/footer'
@@ -23,11 +22,16 @@ interface Istate {
   flat:boolean
 }
 
+interface Isection {
+  path:string,
+  component:JSX.Element
+}
+
 class App extends React.Component<Iprops & RouteProps, Istate>
 {
   private currentSection:HTMLElement | null = null
   private transitionDuration:number = 300
-  private paths = {
+  private paths:{[name: string]:Isection } = {
     "welcome": {
       path: "/",
       component: <Welcome />
