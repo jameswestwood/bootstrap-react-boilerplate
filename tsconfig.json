@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "noImplicitAny": false,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react",
+      "strict": true,
+      "sourceMap": true
+    },
+  "exclude": ["dist", "node_modules", "typings"]
+}
