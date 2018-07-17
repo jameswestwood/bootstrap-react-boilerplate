@@ -1,19 +1,19 @@
 /* @flow */
 
-import * as React from 'react';
-import { Switch, Route, RouteProps } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import anime from 'animejs';
+import * as React from 'react'
+import { Switch, Route, RouteProps } from 'react-router-dom'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import anime from 'animejs'
 
-import Utilities from '../classes/utilities';
+import Utilities from '../classes/utilities'
 
-import Header from './header/header';
-import Nav from './nav/nav';
-import Welcome from './welcome/welcome';
-import About from './about/about';
-import Footer from './footer/footer';
+import Header from './header/header'
+import Nav from './nav/nav'
+import Welcome from './welcome/welcome'
+import About from './about/about'
+import Footer from './footer/footer'
 
-import styles from './app.scss';
+import  './app.scss'
 
 interface Iprops {
   breakpoint:number
@@ -25,8 +25,8 @@ interface Istate {
 
 class App extends React.Component<Iprops & RouteProps, Istate>
 {
-  private currentSection:HTMLElement | null = null;
-  private transitionDuration:number = 300;
+  private currentSection:HTMLElement | null = null
+  private transitionDuration:number = 300
   private paths = {
     "welcome": {
       path: "/",
@@ -66,15 +66,15 @@ class App extends React.Component<Iprops & RouteProps, Istate>
 
       this.setState({
         flat: true
-      });
+      })
     }
     else if(this.state.flat === true
             && currentSize > this.props.breakpoint){
 
       this.setState({
         flat: false
-      });
-    };
+      })
+    }
   }
 
   async transitionSections(nextSection:HTMLElement){
@@ -85,13 +85,13 @@ class App extends React.Component<Iprops & RouteProps, Istate>
       opacity: 0,
       scale:1.1,
       duration:0,
-    });
+    })
 
     if(this.currentSection != null
       && nextSection != null)
     {
       //  take next section out of page flow temporarily while current section is transitioned out
-      nextSection.style.display = "none";
+      nextSection.style.display = "none"
 
       // transition out current section
       const exitComplete = anime({
@@ -102,11 +102,11 @@ class App extends React.Component<Iprops & RouteProps, Istate>
                               duration: this.transitionDuration
                             });
 
-      await exitComplete.finished;
+      await exitComplete.finished
 
       // remove transitioned section from page flow, otherwise the scroll bar will jump as both sections are briefly present
-      this.currentSection.style.display = "none";
-      nextSection.style.removeProperty('display');
+      this.currentSection.style.display = "none"
+      nextSection.style.removeProperty('display')
     }
 
     // transition in next section
@@ -117,9 +117,9 @@ class App extends React.Component<Iprops & RouteProps, Istate>
       duration: this.transitionDuration,
       easing: 'easeOutQuad',
       delay:100
-    });
+    })
 
-    this.currentSection = nextSection;
+    this.currentSection = nextSection
   }
 
   render(){
@@ -127,7 +127,6 @@ class App extends React.Component<Iprops & RouteProps, Istate>
       <div className={"ui" + (!this.state.flat ? ' ui--layered' : '')}>
 
         <Header specifier="ui" paths={this.paths} />
-        {/**
         <main className="ui__content">
         {(() => {
           switch(this.state.flat)
@@ -147,47 +146,46 @@ class App extends React.Component<Iprops & RouteProps, Istate>
                         {(() => {
 
                           const keys:Array<string> = Object.keys(this.paths);
-                          let routes:Array<React.Element<any>> = [];
+                          let routes:Array<JSX.Element> = []
 
                           for(let i:number = 0; i < keys.length; i++)
                           {
                             routes.push(<Route exact={true}
                                                path={this.paths[keys[i]].path}
                                                render={() => <section className="ui__section" id={location.pathname}>{this.paths[keys[i]].component}</section>}
-                                               key={'route-' + (keys[i])} />);
+                                               key={'route-' + (keys[i])} />)
                           }
 
-                          return routes;
+                          return routes
 
                         })()}
                       </Switch>
                     </CSSTransition>
                   </TransitionGroup>
-                )}/>;
+                )}/>
 
             case true :  // render flattened app for lower resolutions
 
-            const keys:Array<string> = Object.keys(this.paths);
-            let sections:Array<React$Node> = [];
+            const keys:Array<string> = Object.keys(this.paths)
+            let sections:Array<JSX.Element> = []
 
             for(let i:number = 0; i < keys.length; i++)
             {
-              let section:JSX.Element = this.paths[keys[i]].component;
+              let section:JSX.Element = this.paths[keys[i]].component
 
               sections.push(<section id={keys[i]}
                                  className="ui__section"
-                                 key={"section-" + (keys[i])}>{section}</section>);
+                                 key={"section-" + (keys[i])}>{section}</section>)
             }
 
             return sections;
-          };
+          }
         })()}
         </main>
         <Footer specifier="ui__footer" />
-        **/}
       </div>
     );
   }
 }
 
-export default App;
+export default App

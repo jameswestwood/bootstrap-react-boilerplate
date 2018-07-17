@@ -2,11 +2,11 @@ import * as React from 'react';
 
 import './footer.scss'
 
-type Props = {
+interface Iprops {
   specifier?:string
 }
 
-class Footer extends React.Component<Props, undefined>
+class Footer extends React.Component<Iprops, any>
 {
   render(){
     return (
@@ -24,4 +24,4 @@ class Footer extends React.Component<Props, undefined>
   }
 }
 
-export default Footer;
+export default Footer

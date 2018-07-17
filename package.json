@@ -95,6 +95,7 @@
     "webpack-serve": "^2.0.2"
   },
   "dependencies": {
+    "@types/es6-promise": "^3.3.0",
     "flow-typed": "^2.4.0",
     "reactstrap": "^6.2.0"
   }

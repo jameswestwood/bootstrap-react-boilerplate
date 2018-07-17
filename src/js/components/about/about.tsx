@@ -1,9 +1,6 @@
 import * as React from 'react';
 
-type Props = {}
-type State = {}
-
-class About extends React.Component<Props, State>
+class About extends React.Component<any, any>
 {
   render(){
     return (
@@ -16,4 +13,4 @@ class About extends React.Component<Props, State>
   }
 }
 
-export default About;
+export default About

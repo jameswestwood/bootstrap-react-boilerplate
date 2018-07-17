@@ -5,13 +5,13 @@ import Nav from '../nav/nav'
 
 import './header.scss'
 
-interface props {
+interface Iprops {
   paths:{},
   current?:string,
   specifier?:string
 }
 
-class Header extends React.Component<props, any>
+class Header extends React.Component<Iprops, any>
 {
   render(){
     return (
