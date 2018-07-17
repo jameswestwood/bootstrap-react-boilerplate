@@ -1,13 +1,7 @@
 module.exports = {
     parser: 'postcss-scss',
     plugins: {
-      'postcss-scss': {},
-      'postcss-import': {},
-      'postcss-mixins': {},
-      'postcss-atroot' : {},
-      'postcss-nested': {},
       'postcss-cssnext': {},
-      'postcss-simple-extend': {},
       'cssnano':{
         'cssnano-util-raw-cache': true,
         'postcss-calc': true,
