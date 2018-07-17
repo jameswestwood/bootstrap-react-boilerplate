@@ -13,9 +13,9 @@
   "author": "James Westwood",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/Westwood/blasteroids/issues"
+    "url": "https://gitlab.com/Westwood/webpack-react-postcss-boilerplate/issues"
   },
-  "homepage": "https://gitlab.com/Westwood/blasteroids#README",
+  "homepage": "https://gitlab.com/Westwood/webpack-react-postcss-boilerplates#README",
   "devDependencies": {
     "@storybook/cli": "^4.0.0-alpha.14",
     "@storybook/react": "^4.0.0-alpha.14",

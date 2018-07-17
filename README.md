@@ -50,3 +50,13 @@ CSS is transformed via **PostCSS** (https://github.com/postcss/postcss). You can
 ### Grid
 
 Grid styles should be applied semantically via bootstraps [grid mixins](https://getbootstrap.com/docs/4.0/layout/grid/#mixins). This keeps our HTML clean and lean, and means layout changes are applied from one place, our CSS. This also helps to keep as much of our styling names adherant to BEM as possible, as our grid CSS is abstracted inside our custom classes.
+
+## Pattern library
+
+React components are documented via [storybook](https://storybook.js.org). A storybook instance can be launched via :
+
+```
+npm run storybook
+```
+
+And will then be available at [here](http://localhost:9001)
