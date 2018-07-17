@@ -7,7 +7,8 @@
     "build": "npm run test | npm run docs | webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --hot --mode development --port 8000 --progress --config webpack.dev.js",
     "docs": "node documentation.js",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "storybook": "start-storybook -p 9001 -c storybook"
   },
   "author": "James Westwood",
   "license": "ISC",
@@ -16,6 +17,8 @@
   },
   "homepage": "https://gitlab.com/Westwood/blasteroids#README",
   "devDependencies": {
+    "@storybook/cli": "^4.0.0-alpha.14",
+    "@storybook/react": "^4.0.0-alpha.14",
     "@types/animejs": "^2.0.0",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
@@ -23,6 +26,7 @@
     "@types/react-transition-group": "^2.0.11",
     "@types/reactstrap": "^6.0.0",
     "animejs": "^2.2.0",
+    "babel-core": "^6.26.3",
     "base64-inline-loader": "^1.1.0",
     "bootstrap": "^4.1.1",
     "browser-sync": "^2.23.3",
@@ -58,6 +62,7 @@
     "postcss-inline": "^1.2.0",
     "postcss-inline-image": "^0.1.1",
     "postcss-loader": "^2.0.10",
+    "postcss-scss": "^2.0.0",
     "postcss-url": "^7.3.1",
     "prop-types": "^15.6.1",
     "puppeteer": "^1.5.0",
