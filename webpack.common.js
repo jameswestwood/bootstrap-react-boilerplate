@@ -21,7 +21,7 @@ module.exports = {
     // page2: APP_DIR + '/js/page2.js'
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     path: BUILD_DIR
   },
   resolve: {

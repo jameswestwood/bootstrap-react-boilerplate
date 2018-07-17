@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "npm run test | npm run docs | webpack --config webpack.prod.js",
-    "dev": "webpack-dev-server --mode development --port 8000 --progress --config webpack.dev.js",
+    "dev": "webpack-dev-server --hot --mode development --port 8000 --progress --config webpack.dev.js",
     "docs": "node documentation.js",
     "test": "jest --verbose"
   },
