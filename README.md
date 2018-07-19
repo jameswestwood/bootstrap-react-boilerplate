@@ -51,6 +51,25 @@ CSS is transformed via **PostCSS** (https://github.com/postcss/postcss). You can
 
 Grid styles should be applied semantically via bootstraps [grid mixins](https://getbootstrap.com/docs/4.0/layout/grid/#mixins). This keeps our HTML clean and lean, and means layout changes are applied from one place, our CSS. This also helps to keep as much of our styling names adherant to BEM as possible, as our grid CSS is abstracted inside our custom classes.
 
+## Tests
+### Typescript / React
+
+The testing methodology around react components follows the guide [here](https://medium.com/selleo/testing-react-components-best-practices-2f77ac302d12)
+
+
+Testing is performed via Jest and the ts-jest
+
+Setup followed this guide
+
+- https://codeburst.io/webpack-typescript-react-part-4-14582e9a33ce
+
+There are a couple of tweaks needed to test Typescript React code with jest around es6 import statements
+
+- https://github.com/facebook/jest/issues/2081#issuecomment-332406033
+- https://github.com/facebook/jest/issues/2081#issuecomment-306706600
+- https://stackoverflow.com/a/34720573/863736
+
+
 ## Pattern library
 
 React components are documented via [storybook](https://storybook.js.org). A storybook instance can be launched via :
