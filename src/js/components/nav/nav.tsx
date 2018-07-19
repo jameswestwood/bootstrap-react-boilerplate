@@ -1,6 +1,7 @@
 import * as React from 'react'
-
 import { withRouter, NavLink } from 'react-router-dom'
+import { Button } from 'reactstrap'
+
 import anime from 'animejs'
 
 import './nav.scss'
@@ -23,6 +24,7 @@ class Nav extends React.Component<Iprops, any>
         {(() => {
 
           let anchors:Array<JSX.Element> = []
+
           for (let key in this.props.paths)
           {
             if (this.props.paths.hasOwnProperty(key))
@@ -40,7 +42,10 @@ class Nav extends React.Component<Iprops, any>
             }
           }
 
+          anchors.push(<Button color="primary">Search</Button>)
+
           return anchors
+
         })()}
       </nav>
     )
